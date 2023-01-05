@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /norobots/
+
+Sitemap: https://quantum-kittens-es.github.io/sitemap.xml
