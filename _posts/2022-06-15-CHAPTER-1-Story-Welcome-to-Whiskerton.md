@@ -1,5 +1,5 @@
 ---
-title: 'Chapter 1 - Story - Welcome to Whiskerton'
+title: 'Capítulo 1 - Historia - Bienvenido a Whiskerton'
 ---
 
 ![](/assets/imgs/cover_beta.png){: style="max-width: 700px" .center}
@@ -40,7 +40,7 @@ _____________________________
 _____________________________
 
 
-**[Chapter 1 Part 2 - Commentary - Introduction](https://quantum-kittens.github.io/posts/CHAPTER-1-Part-2-Introduction-to-Quantum-Computing/)**
+**[Capítulo 1 Parte 2 - Comentario - Introducción a la Computación Cuántica](https://quantum-kittens-es.github.io/posts/CHAPTER-1-Part-2-Introduction-to-Quantum-Computing/)**
 
 
-**[Chapter 2 - Story - Schrödinger Day](https://quantum-kittens.github.io/posts/CHAPTER-2-Story-Schr%C3%B6dinger-Day/)**
+**[Capítulo 2 - Historia - Día de Schrödinger](https://quantum-kittens-es.github.io/posts/CHAPTER-2-Story-Schr%C3%B6dinger-Day/)**
