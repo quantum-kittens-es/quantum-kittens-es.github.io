@@ -1,74 +1,74 @@
 ---
-title: 'Chapter 3 Part 2 - Commentary - Multiple Qubits, Entanglement, and Bell States'
+title: 'Capítulo 3 Parte 2 - Comentario - Múltiples Qubits, Entrelazamiento y Estados de Bell'
 math: true
 ---
 
 
-There isn’t much you can do with a single classical bit. Information processing and algorithms usually require more units of information. For instance, down at the machine level, an image on your social media feed is not represented by a single bit. It is represented by *many* bits, many 0’s and 1’s, long strings of bits, and it is those bit strings that are transmitted across the internet and processed by your devices.
+No hay mucho que puedas hacer con un solo bit clásico. El procesamiento de la información y los algoritmos suelen requerir más unidades de información. Por ejemplo, a nivel de máquina, una imagen en tu muro de redes sociales no está representada por un solo bit. Está representado por *muchos* bits, muchos 0s y 1s, largas cadenas de bits, y son esas cadenas de bits las que se transmiten a través de Internet y son procesadas por tus dispositivos.
 
-In a similar fashion, there isn’t much you can do with a single qubit, no matter how fancy a qubit may seem. In fact, the potential advantage of quantum computing over classical computing in certain contexts lies in being able to one day create processors with hundreds and maybe thousands of stable, perfect qubits.
+De manera similar, no hay mucho que puedas hacer con un solo qubit, sin importar cuán elegante pueda parecer un qubit. De hecho, la ventaja potencial de la computación cuántica sobre la computación clásica en ciertos contextos radica en poder algún día crear procesadores con cientos y tal vez miles de qubits estables y perfectos.
 
-Therefore, most quantum computing protocols involve more than one qubit, the way the doorbells of Whiskerton involve more than one marble. Granted, the doorbells of Whiskerton are still very simple quantum systems with only two marbles, whereas some of the algorithms designed for future quantum computers involve loads more. Nonetheless, these doorbells illustrate something that even more complex protocols make use of: a quantum phenomenon that has no analog in the classical world, *quantum entanglement*.
+Por lo tanto, la mayoría de los protocolos de computación cuántica involucran más de un qubit, de la misma manera que los timbres de las puertas de Whiskerton involucran más de una canica. Por supuesto, los timbres de Whiskerton siguen siendo sistemas cuánticos muy simples con solo dos canicas, mientras que algunos de los algoritmos diseñados para futuras computadoras cuánticas involucran mucho más. No obstante, estos timbres ilustran algo de lo que hacen uso incluso protocolos más complejos: un fenómeno cuántico que no tiene análogo en el mundo clásico, el *entrelazamiento cuántico*.
 
-## What is Quantum Entanglement?
+## ¿Qué es el Entrelazamiento Cuántico?
 
-Quantum entanglement describes a peculiar connection or relationship between quantum systems. If two quantum systems are entangled, they are connected in such a way that their states cannot be described independently, and performing measurements on one system will affect the other, even if the second system isn’t nearby. 
+El entrelazamiento cuántico describe una conexión o relación peculiar entre sistemas cuánticos. Si dos sistemas cuánticos están entrelazados, están conectados de tal manera que sus estados no pueden describirse de forma independiente, y realizar mediciones en un sistema afectará al otro, incluso si el segundo sistema no está cerca. 
 
-In essence, the following is possible in the quantum world:
+En esencia, lo siguiente es posible en el mundo cuántico:
 
-> Even if two qubits (or quantum systems) are too far apart to influence each other, they can still be correlated in such a way that tampering with one immediately affects the other.
+> Incluso si dos qubits (o sistemas cuánticos) están demasiado separados para influirse entre sí, aún pueden estar correlacionados de tal manera que la manipulación de uno afecte inmediatamente al otro.
 {: .prompt-tip }
 
-The two marbles in a Whiskertese doorbell are entangled. Remember that if one turns red, the second one does as well, even though the two are in separate boxes. No one needs to look directly at the second marble in order for it to reduce to a single color.  
+Las dos canicas en un timbre Whiskerteso están entrelazadas. Recuerda que si una se vuelve roja, la segunda también lo hace, aunque las dos están en casillas separadas. Nadie necesita mirar directamente a la segunda canica para que se reduzca a un solo color.  
 
-This entanglement isn’t quite like the correlations we see in our everyday lives. In our classical world, if you have two marbles in an opaque bag, one red and one blue, and you pull out the blue one, you would know immediately that the red one was still in the bag. That’s classical correlation, the type of correlation we experience on the daily. 
+Este entrelazamiento no es como las correlaciones que vemos en nuestra vida cotidiana. En nuestro mundo clásico, si tienes dos canicas en una bolsa opaca, una roja y otra azul, y sacas la azul, sabrás inmediatamente que la roja todavía está en la bolsa. Esa es la correlación clásica, el tipo de correlación que experimentamos a diario. 
 
-However, quantum entanglement doesn’t behave like classical correlations. There are nuances to it that don’t translate to our everyday experience. For one, if the marbles were Whiskertese marbles, then they wouldn’t be a single color in the first place. The marble you pull out of the bag would be in a superposition until you looked at it. Only once the marble in your hand reduces to a single color would the marble in the bag change, even if the bag was taken far away from you. [^fn-nth-1]
+Sin embargo, el entrelazamiento cuántico no se comporta como las correlaciones clásicas. Hay matices que no se traducen en nuestra experiencia cotidiana. Por un lado, si las canicas fueran canicas Whiskertesas, entonces no serían de un solo color en primer lugar. La canica que sacas de la bolsa estaría superpuesta hasta que la miraras. Solo una vez que la canica en tu mano se reduzca a un solo color, la canica en la bolsa cambiará, incluso si la bolsa se la llevaran lejos de ti. [^fn-nth-1]
 
-[^fn-nth-1]: There are other nuances to entanglement as well, and two quantum systems that are very, very far apart must also be what is known as *non-local* to influence one another, but those are explorations for another day.
+[^fn-nth-1]: También hay otros matices en el entrelazamiento, y dos sistemas cuánticos que están muy, muy separados también deben ser lo que se conoce como *no locales* para influirse mutuamente, pero esas son exploraciones para otro día.
 
-Since we’re talking about two entities immediately influencing one another despite distance between them, at this point you may rightfully wonder: does this mean we can send information faster than light? Unfortunately, the answer is no.
+Dado que estamos hablando de dos entidades que se influyen mutuamente de inmediato a pesar de la distancia entre ellas, en este punto puedes preguntarte con razón: ¿significa esto que podemos enviar información más rápido que la luz? Desafortunadamente, la respuesta es no.
 
-The catch is that simply performing any old type of measurement won’t work—yes, there are different *types* of measurements! The varying types of measurements are beyond the scope of the current text, but suffice it to say that if you and a friend who lives far away share an entangled pair, then the type of measurement you perform on your part of the pair must be conveyed to your friend somehow. If your friend doesn’t know which type of measurement to perform on their part, they won’t be able to ‘see’ the expected result! So some sort of communication must take place, say, through a telephone call. Which…cannot happen faster than light.
+El problema es que simplemente realizar cualquier antiguo tipo de medición no funcionará; sí, ¡hay diferentes *tipos* de mediciones! Los diferentes tipos de mediciones están más allá del alcance del texto actual, pero basta decir que si tú y un amigo que vive lejos comparten un par entrelazado, entonces el tipo de medición que realizas de tu parte debe transmitirse a tu amigo de alguna manera. Si tu amigo no sabe qué tipo de medición debe realizar, por su parte, ¡no podrá ‘ver’ el resultado esperado! Por lo tanto, debe tener lugar algún tipo de comunicación, digamos, a través de una llamada telefónica. Lo cual... no puede suceder más rápido que la luz.
 
->If you’d like to dive a little deeper into quantum entanglement, read on! Otherwise, head on over to the next page: [This is Not the End](https://quantum-kittens.github.io/posts/This-is-not-the-end/).
+>Si deseas profundizar un poco más en el entrelazamiento cuántico, ¡sigue leyendo! De lo contrario, dirígete a la siguiente página: [Este No es el Final](https://quantum-kittens.github.io/posts/This-is-not-the-end/).
 {: .prompt-info }
+
 
 _______
 
-## Mathematical Representation of Multi-Qubit States
+## Representación Matemática de Estados Multi-Qubit
 
-Multiple qubit states are represented in a similar manner to single qubit states. We’ll focus on two-qubit states since Whiskerton doorbells have two qubits, but the representation holds for even higher numbers.
+Los estados de varios qubits se representan de manera similar a los estados de un solo qubit. Nos centraremos en los estados de dos qubits, ya que los timbres de Whiskerton tienen dos qubits, pero la representación es válida incluso para cantidades más altas.
 
 
-Recall the equation for an arbitrary single qubit state from [Chapter 2](https://quantum-kittens.github.io/posts/CHAPTER-2-Part-2-Qubits-Superposition-and-Measurements/):
-
+Recuerda la ecuación para un estado de qubit único arbitrario del [Capítulo 2](https://quantum-kittens-es.github.io/posts/CHAPTER-2-Part-2-Qubits-Superposition-and-Measurements/):
 
 \begin{equation}
 \ket{\psi}=\alpha_{0}\ket{0}+\alpha_{1}\ket{1}
 \end{equation}
 
-In this equation, the basis states are analogous to the two values a classical bit can have: 0 and 1. And a qubit can be in a superposition of the two basis states. 
+En esta ecuación, los estados básicos son análogos a los dos valores que puede tener un bit clásico: 0 y 1. Y un qubit puede estar en una superposición de los dos estados base. 
 
-In order to understand how to represent a two-qubit state, let’s look at all the possible values of two classical bits. Two bits, combined, can have one of four values: 00, 01, 10, or 11. Just like the single qubit case, these four values correspond to four basis states. Two qubits can be in one of these four states or they can be in a superposition of these states! Therefore, an arbitrary two-qubit state can be represented by the following equation:
+Para entender cómo representar un estado de dos qubits, veamos todos los valores posibles de dos bits clásicos. Dos bits, combinados, pueden tener uno de cuatro valores: 00, 01, 10 o 11. Al igual que en el caso de un solo qubit, estos cuatro valores corresponden a cuatro estados base. ¡Dos qubits pueden estar en uno de estos cuatro estados o pueden estar en una superposición de estos estados! Por lo tanto, un estado arbitrario de dos qubits se puede representar mediante la siguiente ecuación:
 
 \begin{equation}
 \ket{\psi}=\alpha_{00}\ket{00}+\alpha_{01}\ket{01}+\alpha_{10}\ket{10}+\alpha_{11}\ket{11}
 \end{equation}
 
-Just like the equation for a single qubit, $\alpha_{00}^2$ is the probability that the two qubits will yield the outcome 00 after measurement. Similarly for the other three basis states. Once again, the laws of probability dictate that $\alpha_{00}^2+\alpha_{01}^2+\alpha_{10}^2+\alpha_{11}^2=1$. 
+Al igual que la ecuación para un solo qubit, $\alpha_{00}^2$ es la probabilidad de que los dos qubits produzcan el resultado 00 después de la medición. Análogamente para los otros tres estados base. Una vez más, las leyes de la probabilidad dictan que $\alpha_{00}^2+\alpha_{01}^2+\alpha_{10}^2+\alpha_{11}^2=1$. 
 
-## Entanglement and Bell States
+## Estados Entrelazados y de Bell
 
-Simply having two qubits in hand is not enough to consider them entangled. The qubits have to be in specific states in order to be considered entangled, which means there are certain $\alpha$ values that imply entanglement. 
+El simple hecho de tener dos qubits en la mano no es suficiente para considerarlos entrelazados. Los qubits deben estar en estados específicos para que se consideren entrelazados, lo que significa que hay ciertos valores $\alpha$ que implican entrelazamiento. 
 
-For instance, in order to represent the entangled state of a Whiskertese doorbell, $\alpha_{01}=\alpha_{10}=0$ and the other two, $\alpha_{00}$ and $\alpha_{11}$, must be equal with their squares adding up to 1.
+Por ejemplo, para representar el estado entrelazado de un timbre Whiskerteso, $\alpha_{01}=\alpha_{10}=0$ y los otros dos, $\alpha_{00}$ y $\alpha_{11}$, deben ser igual a sus cuadrados sumando 1.
 
-Let’s break this down. In a Whiskertese doorbell, the marbles become the same color after the outer marble is directly observed. If the marbles can only become the same color, then only two possible states are allowed: $\ket{red, red}$ and $\ket{blue, blue}$. The first position in each $\ket{}$ represents the outer marble, and the second position represents the inner marble. The state $\ket{red, blue}$ is illegal and can never happen within the doorbell apparatus, and so, the probability associated with it is zero. Same for $\ket{blue, red}$.
+Analicemos esto. En un timbre Whiskerteso, las canicas se vuelven del mismo color después de observar directamente la canica exterior. Si las canicas solo pueden volverse del mismo color, entonces solo se permiten dos estados posibles: $\ket{rojo, rojo}$ y $\ket{azul, azul}$. La primera posición en cada $\ket{}$ representa la canica exterior y la segunda posición representa la canica interior. El estado $\ket{rojo, azul}$ es ilegal y nunca puede ocurrir dentro del timbre de la puerta, por lo que la probabilidad asociada con él es cero. Lo mismo para $\ket{azul, rojo}$.
 
-This means the only non-zero probabilities are the ones associated with $\ket{red, red}$ and $\ket{blue, blue}$, and since Whiskertese marbles have a 50-50 chance of becoming either color, the two probabilities must be equal.
+Esto significa que las únicas probabilidades distintas de cero son las asociadas con $\ket{rojo, rojo}$ y $\ket{azul, azul}$, y dado que las canicas Whiskertesas tienen una probabilidad de 50-50 de convertirse en cualquier color, las dos probabilidades deben ser iguales.
 
-So here is what that state looks like:
+Así que así es como se ve ese estado:
 
 
 \begin{equation}
@@ -76,21 +76,21 @@ So here is what that state looks like:
 \label{eq:bellstate}
 \end{equation}
 
-The marbles are in what is known as a "Bell state”—named after the physicist John S. Bell, and *not* because this is the state of the doorbells in Whiskerton. The above equation is what this particular Bell state looks like mathematically, where $\phi^+$ is a naming convention. [^fn-nth-2]
+Las canicas se encuentran en lo que se conoce como un "estado de Bell”, llamado así por el físico John S. Bell, y *no* porque este es el estado de los timbres en Whiskerton. La ecuación anterior es el aspecto matemático de este estado particular de Bell, donde $\phi^+$ es una convención de nomenclatura. [^fn-nth-2]
 
-[^fn-nth-2]: This is what the Bell state looks like mathematically in the *computational basis*, which is a reference to the type of measurement required to ‘see’ the outcome. There are different bases associated with different types of measurements.
+[^fn-nth-2]: Así es como se ve matemáticamente el estado de Bell en la *base computacional*, que es una referencia al tipo de medida requerida para ‘ver’ el resultado. Hay diferentes bases asociadas con diferentes tipos de mediciones.
 
-As you can see, there's an equal probability for either of the two basis states $\ket{00},\ket{11}$ to occur, before the first qubit is measured. But when the first qubit becomes either $\ket{0}$ or $\ket{1}$, then the second one has no choice but to follow. In this manner the outcomes are correlated, and the qubits are entangled. 
+Como puedes ver, existe la misma probabilidad de que ocurra cualquiera de los dos estados base $\ket{00},\ket{11}$, antes de que se mida el primer qubit. Pero cuando el primer qubit se convierte en $\ket{0}$ o $\ket{1}$, el segundo no tiene más remedio que seguirlo. De esta manera, los resultados se correlacionan y los qubits se entrelazan. 
 
-At this point it is important to note that this isn't the only Bell state; there are others. For instance, one of the other Bell states involves the second qubit always becoming the *opposite* of what the first becomes! But that's not how the entangled marbles of Whiskerton's doorbells behave.
+En este punto, es importante tener en cuenta que este no es el único estado de Bell; hay otros. Por ejemplo, uno de los otros estados de Bell implica que el segundo qubit siempre se convierte en el *opuesto* de lo que se convierte el primero. Pero no es así como se comportan las canicas entrelazadas de los timbres de Whiskerton.
 
-These two-qubit pairs that are in Bell states are called EPR pairs, after physicists Albert Einstein, Boris Podolsky, and Nathan Rosen. EPR pairs and entanglement are a valuable resource for theoretical and potential quantum computing applications like quantum cryptography, superdense coding, and quantum teleportation. [^fn-nth-3]
+Estos pares de dos qubits que se encuentran en los estados de Bell se denominan pares EPR, en honor a los físicos Albert Einstein, Boris Podolsky y Nathan Rosen. Los pares EPR y el entrelazamiento son un recurso valioso para las aplicaciones teóricas y potenciales de computación cuántica, como la criptografía cuántica, la codificación superdensa y la teleportación cuántica. [^fn-nth-3]
 
-[^fn-nth-3]: Teleportation in this context is not the teleportation you find in Star Trek. We plan to explore this application in a future story!
+[^fn-nth-3]: La teleportación en este contexto no es la teletransportación que encuentras en Star Trek. ¡Planeamos explorar esta aplicación en una historia futura!
  
-## Quick Note on Physical Entangled Qubits
+## Nota Rápida sobre Qubits Físicos Entrelazados
  
-Physically constructing entangled qubits in the lab depends on what you use for qubits. For instance, two photons from a single source, generated in a specific manner, may emerge entangled. There's no single universal 'entangler' the way there is in Whiskerton. And, more accurately, no one actually calls these sources 'entanglers'! Well, apart from cats.
+La construcción física de qubits entrelazados en el laboratorio depende de lo que uses para los qubits. Por ejemplo, dos fotones de una sola fuente, generados de una manera específica, pueden emerger entrelazados. No hay un único 'enredador' universal como lo hay en Whiskerton. Y, más exactamente, ¡nadie llama realmente a estas fuentes 'enredadores'! Bueno, aparte de los gatos.
  
 _____________________________
 
@@ -101,7 +101,7 @@ _____________________________
 _____________________________
 
 
-**[Next: This is Not the End](https://quantum-kittens.github.io/posts/This-is-not-the-end/)**
+**[Next: This is Not the End](https://quantum-kittens-es.github.io/posts/This-is-not-the-end/)**
  
 ________
 
@@ -136,7 +136,7 @@ doorbell_circuit.draw('mpl') # See how the circuit looks.
 
 The above code is also available as a jupyter notebook [here](https://github.com/quantum-kittens/quantum-kittens.github.io/blob/main/jupyter_notebooks/QK_Chapter_3.ipynb).
 
-As an exercise, run this circuit in a similar way to the marble circuit in [Chapter 2](https://quantum-kittens.github.io/posts/CHAPTER-2-Part-2-Qubits-Superposition-and-Measurements/)!
+As an exercise, run this circuit in a similar way to the marble circuit in [Chapter 2](https://quantum-kittens-es.github.io/posts/CHAPTER-2-Part-2-Qubits-Superposition-and-Measurements/)!
 
 *Note: the Qiskit code provided is open source, and does not fall under the copyright of Quantum Kittens.*
 
