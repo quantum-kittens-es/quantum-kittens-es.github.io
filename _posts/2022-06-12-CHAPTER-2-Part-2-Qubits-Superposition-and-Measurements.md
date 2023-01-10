@@ -1,146 +1,149 @@
 ---
-title: 'Chapter 2 Part 2 - Commentary - Qubits, Superposition, and Measurement'
+title: 'Capítulo 2 Parte 2 - Comentario - Qubits, Superposición y Medición'
 math: true
 ---
 
 
 
-You very likely know what classical computing is; it’s what most people mean when they say “computing”. This is the computing done by everyday electronic gadgets like the device you’re using to read this, and even the computing done by supercomputers tucked away in labs.
+Es muy probable que sepas qué es la computación clásica; es lo que la mayoría de la gente quiere decir cuando dice “computación”. Esta es la computación realizada por dispositivos electrónicos cotidianos, como el dispositivo que estás utilizando para leer esto, e incluso la computación realizada por supercomputadoras escondidas en los laboratorios.
 
-Deep down at the fundamental level of a classical computer, information is carried by *bits*: single units of information that can have only one of two values or *states*: 0 or 1.  In much the same way, quantum computers have a fundamental computing unit, called quantum bits or *qubits*. Here’s a fun fact: the marbles of Whiskerton actually represent qubits!
+En el nivel fundamental de una computadora clásica, la información es transportada por *bits*: unidades individuales de información que pueden tener solo uno de dos valores o *estados*: 0 o 1. De la misma manera, las computadoras cuánticas tienen una unidad computacional fundamental, llamada bits cuánticos o *qubits*. Aquí hay un hecho divertido: ¡las canicas de Whiskerton en realidad representan qubits!
 
-## What is a Qubit?
+## ¿Qué es un Qubit?
 
-A qubit is the simplest system in quantum computing, the fundamental building block for quantum computation. Physically, qubits can take a number of different forms, depending on the hardware a quantum computer uses. But, behaviorally, they act the same way. So you can consider a ‘qubit’ to be an abstract mathematical object that behaves in a curious manner different from a classical bit. Classical bits can take on one of two values, 0 and 1, but a qubit can do that and more:
+Un qubit es el sistema más simple de la computación cuántica, el bloque de construcción fundamental para la computación cuántica. Físicamente, los qubits pueden tomar varias formas diferentes, según el hardware que utilice una computadora cuántica. Pero, conductualmente, actúan de la misma manera. Entonces, puedes considerar que un ‘'qubit’ es un objeto matemático abstracto que se comporta de una manera curiosa diferente de un bit clásico. Los bits clásicos pueden tomar uno de dos valores, 0 y 1, pero un qubit puede hacer eso y más:
 
-> Qubits are abstract mathematical objects that have the ability to not only be in the states 0 or 1, but in a *superposition* of the two. 
+> Los qubits son objetos matemáticos abstractos que tienen la capacidad no solo de estar en los estados 0 o 1, sino en una *superposición* de los dos.
 {: .prompt-tip }
 
-## Quantum Superposition
 
-Quantum superposition is a neat quantum physics phenomenon that doesn’t really have an analog in classical physics. You can think of it as a combination. 
+## Superposición Cuántica
 
-Where classical bits can only ever be in state 0 or 1 and never a combination of the two, quantum states can be combined and still be valid states. So the state of a qubit can be a combination of 0 *and* 1.
+La superposición cuántica es un fenómeno puramente de la física cuántica que realmente no tiene un análogo en la física clásica. Puedes pensar en ello como una combinación. 
 
-![](/assets/imgs/Marble_Animation.png){: style="max-width: 150px" .left} In Whiskerton, the marbles are by default in such a superposition state: an equally weighted combination of the colors red and blue. It would be incorrect to think of these colors as paint colors. In your everyday, classical experience, if you combine red and blue paint, you would get purple paint. But Whiskertese marbles aren’t actually purple; after a cat directly observes a marble, the color can turn either red or blue, with a fifty percent chance for each. You definitely cannot get the colors red or blue back if you have purple paint!
+Donde los bits clásicos solo pueden estar en el estado 0 o 1 y nunca una combinación de los dos, los estados cuánticos pueden combinarse y seguir siendo estados válidos. Entonces, el estado de un qubit puede ser una combinación de 0 *y* 1.
 
-Being able to make use of this wondrous phenomenon is one of the ways quantum computing differs from classical computing. In a classical computer, if you perform an operation on a bit, you’re essentially performing that operation on either a 0 or 1, one at a time. If you need to perform an operation on both, you’d have to do so in two shots, consecutively. 
+![](/assets/imgs/Marble_Animation.png){: style="max-width: 150px" .left} En Whiskerton, las canicas están por defecto en tal estado de superposición: una combinación de igual peso de los colores rojo y azul. Sería incorrecto pensar en estos colores como colores de pintura. En tu experiencia cotidiana clásica, si combinas pintura roja y azul, obtendrás pintura morada. Pero las canicas Whiskertesas no son en realidad moradas; después de que un gato observa directamente una canica, el color puede volverse rojo o azul, con un cincuenta por ciento de probabilidad para cada uno. ¡Definitivamente, no puedes recuperar los colores rojo o azul si tienes pintura morada!
 
-But by harnessing superposition, a quantum computer could perform that operation on both 0 and 1 at the same time. If we scale this up to many qubits, you can imagine how this may potentially result in speed-ups or an increase in memory capacity or other improvements.
+Poder hacer uso de este maravilloso fenómeno es una de las diferencias entre la computación cuántica y la computación clásica. En una computadora clásica, si realizas una operación en un bit, esencialmente estás realizando esa operación ya sea en un 0 o un 1, uno a la vez. Si necesitas realizar una operación en ambos, deberás hacerlo en dos iteraciones, consecutivamente. 
 
-## Measurements
+Pero aprovechando la superposición, una computadora cuántica podría realizar esa operación tanto en el 0 como en el 1 al mismo tiempo. Si escalamos esto a muchos qubits, puedes imaginarte cómo esto puede potencialmente resultar en aceleraciones o un aumento en la capacidad de la memoria u otras mejoras.
 
-You’ve seen that the marbles have a fifty percent chance of becoming red or blue upon direct observation. A cat observing a marble is a metaphor of measuring a qubit’s state, where red represents a 1 and blue represents a 0. In real life, measurements are conducted by measuring physical quantities in the lab.
+## Mediciones
 
-Measurement is essentially asking the qubit what state it’s in, but there’s a caveat: simply the act of measurement makes the qubit settle into either the 0 or 1 states, so you only ever get the answer 0 or 1. But there’s a probability associated with each possible outcome.
+Has visto que las canicas tienen un cincuenta por ciento de posibilidades de volverse rojas o azules al observarlas directamente. Un gato que observa una canica es una metáfora de la medición del estado de un qubit, donde el rojo representa un 1 y el azul representa un 0. En la vida real, las mediciones se realizan midiendo cantidades físicas en el laboratorio.
 
-Even if you happen to know everything about the probabilities beforehand--that is, even if you know the exact superposition state of the qubit before measurement--you cannot predict the outcome of a measurement.
+La medición es esencialmente preguntarle al qubit en qué estado se encuentra, pero hay una advertencia: simplemente el acto de medir hace que el qubit se asiente en los estados 0 o 1, por lo que solo obtienes la respuesta 0 o 1. Pero hay una probabilidad asociada con cada resultado posible.
 
-Essentially:
+Incluso si sabes todo sobre las probabilidades de antemano, es decir, incluso si conoces el estado de superposición exacto del qubit antes de la medición, no puedes predecir el resultado de una medición.
 
-> Even if you know everything about the state of a quantum system, it *can* still behave randomly.
+Esencialmente:
+
+> Incluso si sabes todo sobre el estado de un sistema cuántico, *puede* seguir comportándose aleatoriamente.
 {: .prompt-tip }
 
-For instance, you know everything about the state of a Whiskertese marble: it's in an equally weighted (fifty-fifty) superposition. Yet, after measurement, we don't know if it will end up as a red marble or a blue one. That part is random!
+Por ejemplo, sabes todo sobre el estado de una canica Whiskertesa: está en una superposición de igual peso (cincuenta y cincuenta). Sin embargo, después de la medición, no sabemos si terminará como una canica roja o azul. ¡Esa parte es aleatoria!
 
-Quantum physics is probabilistic, which means there is some *uncertainty*. A measurement moves the system from uncertainty to certainty.
+La física cuántica es probabilística, lo que significa que hay algo de *incertidumbre*. Una medición mueve el sistema de la incertidumbre a la certeza.
 
-At first glance, it may appear that the benefit of quantum superposition has vanished since you only ever get 0’s and 1’s as your outcomes, no different from classical bits. Enter quantum computing algorithms. 
+A primera vista, puede parecer que el beneficio de la superposición cuántica se ha desvanecido ya que solo obtienes 0s y 1s como resultados, no diferentes de los bits clásicos. Entremos a los algoritmos de la computación cuántica. 
 
-An algorithm is basically a series of operations you perform to get a desired result. What a quantum computing algorithm does is manipulate the probabilities, increasing the probability associated with the desired outcome and decreasing all others. [^footnote] In this way, if the probability associated with the desired state hits 1, then that outcome is guaranteed, which means the behavior is no longer random. 
+Un algoritmo es básicamente una serie de operaciones que realizas para obtener un resultado deseado. Lo que hace un algoritmo de computación cuántica es manipular las probabilidades, aumentando la probabilidad asociada con el resultado deseado y disminuyendo todas las demás. [^footnote] De esta manera, si la probabilidad asociada con el estado deseado llega a 1, entonces ese resultado está garantizado, lo que significa que el comportamiento ya no es aleatorio. 
 
-[^footnote]: Quantum operations are carried out by applying what are known as *quantum gates,* logic operations that are the building block of quantum circuits, and analogous to classical logic gates in conventional digital circuits. 
+[^footnote]: Las operaciones cuánticas se llevan a cabo aplicando lo que se conoce como *compuertas cuánticas*, operaciones lógicas que son la base de los circuitos cuánticos y análogas a las compuertas lógicas clásicas en los circuitos digitales convencionales. 
 
-So there you have it. Now that you have an overview of qubits, quantum superposition, and measurements, you know the physics behind the marbles in Whiskerton. 
+Así que ahí lo tienes. Ahora que tienes una descripción general de los qubits, la superposición cuántica y las mediciones, conoces la física detrás de las canicas en Whiskerton. 
 
->If you’d like to dive deeper into these concepts and see how Blade’s predicament is related to what is known as Schrödinger’s cat, read on! Otherwise, head on over to the next story: [Chapter 3 - Story - Doorbells](https://quantum-kittens.github.io/posts/CHAPTER-3-Story-Doorbells/)
+>Si deseas profundizar en estos conceptos y ver cómo el predicamento de Blade se relaciona con lo que se conoce como el gato de Schrödinger, ¡sigue leyendo! De lo contrario, dirígete a la siguiente historia:
+[Capítulo 3 - Historia - Timbres](https://quantum-kittens.github.io/posts/CHAPTER-3-Story-Doorbells/)
 {: .prompt-info }
+
 _______
 
-## Mathematical Representation of a Qubit State
+## Representación Matemática de un Estado de Qubit
 
-Quantum states are mathematically represented by what is known as *Dirac notation*, which makes use of something called a *ket*: $\ket{}$[^fn-nth-1].
+Los estados cuánticos se representan matemáticamente mediante lo que se conoce como *notación de Dirac*, que hace uso de algo llamado *ket*: $\ket{}$[^fn-nth-1].
 
-[^fn-nth-1]: A ket denotes a mathematical object with certain properties called a *vector*. A qubit can be considered a vector. Two vectors can be combined to form another valid vector. But you don't need to know about vectors to read this text.
+[^fn-nth-1]: Un ket denota un objeto matemático con ciertas propiedades llamado *vector*. Un qubit puede considerarse un vector. Se pueden combinar dos vectores para formar otro vector válido. Pero no necesitas saber sobre vectores para leer este texto.
 
-This is how an arbitrary qubit state is represented[^fn-nth-2]:
+Así es como se representa un estado de qubit arbitrario[^fn-nth-2]:
 
 \begin{equation}
 \label{eq:qubit}
 \ket{\psi}=\alpha_{0}\ket{0}+\alpha_{1}\ket{1}
 \end{equation}
 
-[^fn-nth-2]: Disclaimer: This equation is not the complete picture of a qubit; there's a degree of freedom called 'phase' that can be useful for computation but is beyond the scope of this text.
+[^fn-nth-2]: Descargo de responsabilidad: Esta ecuación no es la imagen completa de un qubit; hay un grado de libertad llamado 'fase' que puede ser útil para los cálculos, pero está más allá del alcance de este texto.
 
-The Greek letter $\psi$, pronounced "sigh", is a symbolic representation of the state. The $\ket{}$ symbol is written, not spoken. When you refer to the qubit, you can voice, "I have a qubit in the state psi,” or write, “I have a qubit in the state  $\ket{\psi}$," after having defined $\ket{\psi}$ in an equation.
+La letra griega $\psi$, pronunciada "psi", es una representación simbólica del estado. El símbolo $\ket{}$ se escribe, no se pronuncia. Cuando te refieres al qubit, puedes expresar "Tengo un qubit en el estado psi” o escribir “Tengo un qubit en el estado $\ket{\psi}$", después de haber definido $\ket{\psi}$ en una ecuación.
 
-Notice that $\psi$ isn't the only thing tucked within a ket. You have $\ket{0}$ and $\ket{1}$ in the equation as well, which are the 0 and 1 states. These are called the *basis states* of the qubits; that is, the possible states a qubit can reduce to after measurement, just as a Whiskertese marble can reduce to a red or a blue.  Since a qubit has *two* basis states, a qubit is a two-level system.
+Ten en cuenta que $\psi$ no es lo único que hay dentro de un ket. También tienes $\ket{0}$ y $\ket{1}$ en la ecuación, que son los estados 0 y 1. Estos se llaman los *estados base* de los qubits; es decir, los posibles estados a los que un qubit puede reducirse después de la medición, al igual que una canica Whiskertesa puede reducirse a rojo o azul. Dado que un qubit tiene *dos* estados base, un qubit es un sistema de dos niveles.
 
-The plus sign indicates a combination, or a superposition. The parameters $\alpha_{0}$ and $\alpha_{1}$ are called *amplitudes*, and let us know how likely it is the qubit will be in the state $\ket{0}$ or $\ket{1}$ after measurement, where $\alpha$ is the Greek letter, alpha. The subscript of the symbol $\alpha$ is a label to indicate to which basis state it corresponds. 
+El signo más indica una combinación o una superposición. Los parámetros $\alpha_{0}$ y $\alpha_{1}$ se denominan *amplitudes* y nos permiten saber la probabilidad de que el qubit se encuentre en el estado $\ket{0}$ o $\ket{1}$ después de la medición, donde $\alpha$ es la letra griega alfa. El subíndice del símbolo $\alpha$ es una etiqueta para indicar a qué estado base corresponde. 
 
-Mathematically, if we square the amplitudes, we’ll get the probabilities associated with each basis state. So, if you measure a qubit in the state $\ket{\psi}$, you will get the result 0 with a probability $\alpha_{0}^2$, or get the result 1 with a probability $\alpha_{1}^2$. [^fn-nth-3] 
+Matemáticamente, si elevamos al cuadrado las amplitudes, obtendremos las probabilidades asociadas con cada estado base. Entonces, si mides un qubit en el estado $\ket{\psi}$, obtendrás el resultado 0 con una probabilidad $\alpha_{0}^2$, u obtendrás el resultado 1 con una probabilidad $\alpha_{1}^2$. [^fn-nth-3]
 
-[^fn-nth-3]: The superscript 2 indicates a 'square', which means the number is being multiplied by itself. That is, $\alpha_{0}^2=\alpha_{0}*\alpha_{0}$.
+[^fn-nth-3]: El superíndice 2 indica un 'cuadrado', lo que significa que el número se multiplica por sí mismo. Es decir, $\alpha_{0}^2=\alpha_{0}*\alpha_{0}$.
 
-You may rightfully be wondering why these squares are suddenly popping into the picture. It is simply a mathematical convention that reminds us the amplitudes $\alpha_{0}$ and $\alpha_{1}$ may be negative. The squares of each of these amplitudes are probabilities, and probabilities are always positive, as are squares!
+Es posible que te preguntes con razón por qué estos cuadrados aparecen repentinamente en la imagen. Es simplemente una convención matemática que nos recuerda que las amplitudes $\alpha_{0}$ y $\alpha_{1}$ pueden ser negativas. Los cuadrados de cada una de estas amplitudes son probabilidades, y las probabilidades son siempre positivas, ¡al igual que los cuadrados!
 
-This means that each quantum state is subject to a constraint. Probability theory has a strict rule: all probabilities should add up to 1, so $\alpha_{0}^2+\alpha_{1}^2=1$ *always*. 
+Esto significa que cada estado cuántico está sujeto a una restricción. La teoría de la probabilidad tiene una regla estricta: todas las probabilidades deben sumar 1, así que $\alpha_{0}^2+\alpha_{1}^2=1$ *siempre*. 
 
-Let's look at a specific example. Suppose we have a qubit in the state:
+Veamos un ejemplo específico. Supongamos que tenemos un qubit en el estado:
 
 \begin{equation}
 \ket{\psi}=\sqrt{\frac{2}{3}}\ket{0}-\sqrt{\frac{1}{3}}\ket{1}
 \end{equation}
 
-Here, $\alpha_{0}=\sqrt{\frac{2}{3}}$, which means the probability of getting the result 0 after measurement is $\frac{2}{3}$. Similarly for $\alpha_{1}=-\sqrt{\frac{1}{3}}$, and a probability of  $\frac{1}{3}$ associated with result 1. That is, if you have a ton of qubits in this state, and you measure them all, statistically speaking, approximately one third of them would yield the outcome 1. The larger the amplitude, $\alpha$, the higher the probability, and the more likely it is to find the qubit in the associated state after measurement.[^fn-nth-4]
+Aquí, $\alpha_{0}=\sqrt{\frac{2}{3}}$, lo que significa que la probabilidad de obtener el resultado 0 después de la medición es $\frac{2}{3}$. De manera similar para $\alpha_{1}=-\sqrt{\frac{1}{3}}$, y una probabilidad de $\frac{1}{3}$ asociada con el resultado 1. Es decir, si tienes un tonelada de qubits en este estado, y los mides todos, estadísticamente hablando, aproximadamente un tercio de ellos produciría el resultado 1. Cuanto mayor sea la amplitud, $\alpha$, mayor será la probabilidad y más posible es encontrar el qubit en el estado asociado después de la medición.[^fn-nth-4]
 
-[^fn-nth-4]: Note for the mathematicians: we refer to $mod(\alpha)$ here.
+[^fn-nth-4]: Nota para los matemáticos: aquí nos referimos a $mod(\alpha)$.
 
-## A Note on Statistics
+## Una Nota sobre la Estadística
 
-The thing about qubits is that you cannot determine $\alpha_{0}$ and $\alpha_{1}$ for an arbitrary state $\ket{\psi}$ through measurements--the only way to know exactly what numbers these $\alpha$'s are is to have created the state yourself, or to know the person who created it. This is because a measurement always results in a single outcome: 0 or 1, so no measurement can lead to the knowledge of the $\alpha$'s. If someone else created the state, you can ask them for thousands of qubits in identical states and after thousands of measurements, statistically decipher what the amplitudes and thus the probabilities of the state are. [^fn-nth-5]
+Lo que pasa con los qubits es que no puedes determinar $\alpha_{0}$ y $\alpha_{1}$ para un estado arbitrario $\ket{\psi}$ a través de mediciones; la única forma de saber exactamente qué números son estas $\alpha$s es haber creado el estado tu mismo, o conocer a la persona que lo creó. Esto se debe a que una medición siempre da como resultado una sola salida: 0 o 1, por lo que ninguna medición puede conducir al conocimiento de las $\alpha$s. Si alguien más creó el estado, puedes pedirle miles de qubits en estados idénticos y después de miles de mediciones, descifrar estadísticamente cuáles son las amplitudes y, por lo tanto, las probabilidades del estado. [^fn-nth-5]
 
-[^fn-nth-5]: This is precisely why quantum circuits are run multiple times: to gather statistics. Quantum circuits are quantum computation models that have gate sequences, measurements, and the like.
+[^fn-nth-5]: Esta es precisamente la razón por la que los circuitos cuánticos se ejecutan varias veces: para recopilar estadísticas. Los circuitos cuánticos son modelos de computación cuántica que tienen secuencias de compuertas, mediciones y similares.
 
-However, you don't necessarily need to know what the $\alpha$'s are in order for qubit states to be useful. The beauty of the qubit state lies in how one can change and manipulate $\alpha_{0}$ and $\alpha_{1}$ with quantum gates before measurement. As mentioned earlier, the goal is to boost the probabilities associated with the desired outcome. If the desired outcome is 0,  then the algorithm can be designed to boost $\alpha_{0}$, regardless of what it is. And if $\alpha_{0} = 1$, then the outcome 0 will be guaranteed.
+Sin embargo, no necesariamente necesitas saber cuáles son las $\alpha$s para que los estados de qubit sean útiles. La belleza del estado de qubit radica en cómo se puede cambiar y manipular $\alpha_{0}$ y $\alpha_{1}$ con compuertas cuánticas antes de la medición. Como se mencionó anteriormente, el objetivo es aumentar las probabilidades asociadas con el resultado deseado. Si el resultado deseado es 0, entonces se puede diseñar el algoritmo para aumentar $\alpha_{0}$, independientemente de lo que sea. Y si $\alpha_{0} = 1$, entonces se garantizará el resultado 0.
 
-## Physical Qubits
+## Qubits Físicos
 
-As stated earlier, qubit states are mathematical constructs, which make them easier to work with mathematically to develop algorithms and the like without making a statement on the physical system that is used. This is important, because it doesn't matter whether you physically construct qubit states in the lab as, say, electron spins, polarized states of photons, or something else.
+Como se indicó anteriormente, los estados de qubit son construcciones matemáticas, lo que hace que sea más fácil trabajar con ellos matemáticamente para desarrollar algoritmos y similares sin hacer una declaración sobre el sistema físico que se utiliza. Esto es importante, porque no importa si construyes físicamente estados de qubit en el laboratorio como, por ejemplo, espines de electrones, estados polarizados de fotones o cualquier otra cosa.
 
-Don’t know what electrons or photons are? Let’s digress briefly:
+¿No sabes qué son los electrones o los fotones? Hagamos una breve digresión:
 
-> An electron is a negatively charged subatomic particle. It has a property called 'spin' that we needn't discuss in detail. Suffice it to say that the spin of an electron can be $+\frac{1}{2}$ or $-\frac{1}{2}$, which mathematically can be represented as the states $\ket{0}$ and $\ket{1}$.
+> Un electrón es una partícula subatómica cargada negativamente. Tiene una propiedad llamada 'espín' que no necesitamos discutir en detalle. Basta decir que el espín de un electrón puede ser $+\frac{1}{2}$ o $-\frac{1}{2}$, que matemáticamente se puede representar como los estados $\ket{0}$ y $\ket{1}$.
 {: .prompt-info }
 
->A photon is the building block of electromagnetic radiation, which includes visible light. Everything that you see is due to these photons hitting your retinae. When photons are *polarized*, they vibrate in a specific direction rather than all directions. In terms of qubits, polarization in the horizontal direction, say, can be represented by $\ket{0}$ and polarization in the vertical direction, say, can be represented by $\ket{1}$. A superposition of the two is possible, and corresponds to the photon vibrating in a direction between vertical and horizontal, analogous to Southeast lying between South and East on a compass.
+>Un fotón es el componente básico de la radiación electromagnética, que incluye la luz visible. Todo lo que ves se debe a estos fotones que golpean tus retinas. Cuando los fotones están *polarizados*, vibran en una dirección específica en lugar de en todas las direcciones. En términos de qubits, la polarización en dirección horizontal, por ejemplo, se puede representar con $\ket{0}$ y la polarización en dirección vertical, por ejemplo, se puede representar con $\ket{1}$. Es posible una superposición de los dos, y corresponde al fotón que vibra en una dirección entre vertical y horizontal, de forma análoga al sureste que se encuentra entre el sur y el este en una brújula.
 {: .prompt-info }
 
-One important thing to note about qubit states is that they are not stable. Little disturbances in a qubit's environment can reduce it to either $\ket{0}$ or $\ket{1}$: disturbances like heat, vibrations, etc.[^fn-nth-6] And even *that* is unstable; after some time a qubit can jump back into a superposition. It's this little tug of war of states that makes qubits a little tricky to manipulate in the lab--and what keeps the cats of Whiskerton intrigued!
+Una cosa importante a tener en cuenta sobre los estados de qubit es que no son estables. Pequeñas perturbaciones en el entorno de un qubit pueden reducirlo a $\ket{0}$ o $\ket{1}$: perturbaciones como calor, vibraciones, etc.[^fn-nth-6] E incluso *eso* es inestable; después de un tiempo, un qubit puede volver a saltar a una superposición. Es este pequeño tira y afloja de los estados lo que hace que los qubits sean un poco difíciles de manipular en el laboratorio, ¡y lo que mantiene intrigados a los gatos de Whiskerton!
 
-[^fn-nth-6]: This sensitivity of quantum states is one of the obstacles in fabricating stable, perfect physical qubits, and devices with a large number of qubits. But this is an exciting research area with lots of promising progress. 
+[^fn-nth-6]: Esta sensibilidad de los estados cuánticos es uno de los obstáculos para fabricar qubits físicos estables y perfectos, y dispositivos con una gran cantidad de qubits. Pero esta es un área de investigación emocionante con muchos avances prometedores.
 
-## Schrödinger's Cat
+## El Gato de Schrödinger
 
-This brings us to Blade in the box with the glitter machine. His predicament is a homage of sorts to a thought experiment by physicist Erwin Schrödinger in 1935[^fn-nth-7].
+Esto nos lleva a Blade en la caja con la máquina de brillantina. Su predicamento es una especie de homenaje a un experimento mental del físico Erwin Schrödinger en 1935[^fn-nth-7].
 
-[^fn-nth-7]: Schrödinger, Erwin (November 1935). "Die gegenwärtige Situation in der Quantenmechanik (The present situation in quantum mechanics)". Naturwissenschaften. 23 (48): 807-812.
+[^fn-nth-7]: Schrödinger, Erwin (November 1935). "Die gegenwärtige Situation in der Quantenmechanik (La situación actual de la mecánica cuántica)". Naturwissenschaften. 23 (48): 807-812. 
 
-Qubits are two-level systems and have two basis states, but there are other quantum particles and systems that can have even more. Yet all of these systems, qubits and beyond, adhere to the same rule: upon measurement, the outcome is only one out of all the possibilities. 
+Los qubits son sistemas de dos niveles y tienen dos estados base, pero hay otras partículas y sistemas cuánticos que pueden tener aún más. Sin embargo, todos estos sistemas, qubits y más, se adhieren a la misma regla: al medir, el resultado es solo una de todas las posibilidades.
 
-No one really knows why this happens. One possible explanation is the Copenhagen interpretation of quantum mechanics, in which the act of measurement itself collapses all possibilities to a single one. In 1935, physicist Erwin Schrödinger published a paper that outlined his famous thought experiment as a push-back to this interpretation, by hypothetically extrapolating quantum effects on a microscopic level to an everyday macroscopic object: a cat.
+Nadie sabe realmente por qué sucede esto. Una posible explicación es la interpretación de Copenhague de la mecánica cuántica, en la que el acto mismo de medir reduce todas las posibilidades a una sola. En 1935, el físico Erwin Schrödinger publicó un artículo que describía su famoso experimento mental como un retroceso a esta interpretación, extrapolando hipotéticamente los efectos cuánticos a nivel microscópico a un objeto macroscópico cotidiano: un gato.
 
-In the original thought experiment, a radioactive substance is used instead of a qubit (or a Whiskertese marble). Radioactive substances decay according to probabilities, just like a qubit reduces to a certain state according to probabilities.
+En el experimento mental original, se usa una sustancia radiactiva en lugar de un qubit (o una canica Whiskertesa). Las sustancias radiactivas se descomponen según las probabilidades, al igual que un qubit se reduce a un determinado estado según las probabilidades.
 
-A cat is placed in a box with a radioactive substance that is linked to a vial of poison. If any one of the atoms decays, then the vial shatters, poisoning the cat. Thus, the state of the cat is coupled with that of the poison system, which is governed by the probability that at least one atom will decay. In this way, before the box is opened, the cat can be considered to be both dead or alive, because each of the possibilities is likely. That is, the cat's reality is undetermined prior to the opening of the box. 
+Un gato se coloca en una caja con una sustancia radiactiva que está vinculada a un frasco de veneno. Si alguno de los átomos se desintegra, el frasco se rompe y envenena al gato. Así, el estado del gato está acoplado con el del sistema del veneno, que se rige por la probabilidad de que al menos un átomo se desintegre. De esta forma, antes de abrir la caja, se puede considerar que el gato está vivo o muerto, porque cada una de las posibilidades es probable. Es decir, la realidad del gato es indeterminada antes de la apertura de la caja. 
 
-Schrödinger argued that this is a 'ridiculous case' and that one can't really believe that before one opens the box the cat is in a superposition of dead and alive. He was right, of course. This scenario can't be considered *truly* quantum. The cat isn't a quantum particle, for one. So while the cat isn't actually in a superposition of dead and alive, the thought experiment at the very least demonstrates a probabilistic system.
+Schrödinger argumentó que este es un 'caso ridículo' y que uno realmente no puede creer que antes de abrir la caja el gato está en una superposición de vivo y muerto. Él tenia razón, por supuesto. Este escenario no puede considerarse *verdaderamente* cuántico. El gato no es una partícula cuántica, por ejemplo. Entonces, si bien el gato no está realmente en una superposición de vivo y muerto, el experimento mental al menos demuestra un sistema probabilístico.
 
-This thought experiment has fast become one of the most recognized iconographies of quantum phenomenon in popular culture, and naturally had to make an appearance in Whiskerton. With glitter, of course, because there's no reason to get morbid in such a quaint little town. Note that Schrödinger didn't actually poison cats--he merely thought about it!
+Este experimento mental se ha convertido rápidamente en una de las iconografías más reconocidas del fenómeno cuántico en la cultura popular y, naturalmente, tenía que aparecer en Whiskerton. Con brillantina, por supuesto, porque no hay motivo para ponerse morboso en un pueblito tan pintoresco. Ten en cuenta que Schrödinger en realidad no envenenó gatos, ¡simplemente pensó en ello!
 
-Now, there’s one more curious aspect to this thought experiment: you could say that the state of the cat is *entangled* with that of the radioactive substance. 
+Ahora, hay otro aspecto curioso de este experimento mental: se podría decir que el estado del gato está *entrelazado* con el de la sustancia radiactiva. 
 
-Quantum entanglement is actually our next stop! Let’s hop to it: **[Next: Chapter 3 - Story - Doorbells](https://quantum-kittens.github.io/posts/CHAPTER-3-Story-Doorbells/)**
+¡El entrelazamiento cuántico es en realidad nuestra próxima parada! Saltemos a ello: [Siguiente: Capítulo 3 - Historia - Timbres](https://quantum-kittens-es.github.io/posts/CHAPTER-3-Story-Doorbells/)
 
 _____________________________
 
