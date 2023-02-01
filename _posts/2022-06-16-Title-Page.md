@@ -1,19 +1,19 @@
 ---
-title: 'Title Page'
+title: 'Página de Título'
 math: true
 ---
 
 ![](/assets/imgs/cover_beta.png){: style="max-width: 700px" .center}
 
 
-*For all cats, big and small, who have ever lived, and will ever live.*
+*Para todos los gatos, grandes y pequeños, que han vivido y vivirán.*
 
 
 
-## How to Read
+## Cómo se debe leer
 
-Each chapter has two parts to it: 
-- Story (part 1) is about cats in Whiskerton
-- Commentary (part 2) explains the quantum concepts demonstrated in the story
+Cada capítulo consta de dos partes: 
+- Historia (parte 1) trata sobre los gatos en Whiskerton
+- Comentario (parte 2) explica los conceptos cuánticos demostrados en la historia
 
-This Beta version contains the first three chapters of *Quantum Kittens*.
+Esta versión Beta contiene los tres primeros capítulos de Quantum Kittens.
