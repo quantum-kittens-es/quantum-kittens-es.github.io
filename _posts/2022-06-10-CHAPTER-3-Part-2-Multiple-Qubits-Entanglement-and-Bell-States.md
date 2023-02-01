@@ -31,7 +31,7 @@ Dado que estamos hablando de dos entidades que se influyen mutuamente de inmedia
 
 El problema es que simplemente realizar cualquier antiguo tipo de medición no funcionará; sí, ¡hay diferentes *tipos* de mediciones! Los diferentes tipos de mediciones están más allá del alcance del texto actual, pero basta decir que si tú y un amigo que vive lejos comparten un par entrelazado, entonces el tipo de medición que realizas de tu parte debe transmitirse a tu amigo de alguna manera. Si tu amigo no sabe qué tipo de medición debe realizar, por su parte, ¡no podrá ‘ver’ el resultado esperado! Por lo tanto, debe tener lugar algún tipo de comunicación, digamos, a través de una llamada telefónica. Lo cual... no puede suceder más rápido que la luz.
 
->Si deseas profundizar un poco más en el entrelazamiento cuántico, ¡sigue leyendo! De lo contrario, dirígete a la siguiente página: [Este No es el Final](https://quantum-kittens.github.io/posts/This-is-not-the-end/).
+>Si deseas profundizar un poco más en el entrelazamiento cuántico, ¡sigue leyendo! De lo contrario, dirígete a la siguiente página: [This is Not the End](https://quantum-kittens.github.io/posts/This-is-not-the-end/).
 {: .prompt-info }
 
 
